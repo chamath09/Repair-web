@@ -28,6 +28,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="tel:+15163796060" class="navbar__cta">Call Now</a></li>
       </ul>
@@ -38,12 +39,13 @@
   <header class="hero" id="hero">
     <div class="hero__overlay"></div>
     <img src="hero-bg.png" alt="Paul's Auto Repair facility" class="hero__bg" loading="eager">
+    <canvas class="hero__particles" id="hero-particles"></canvas>
     <div class="container hero__content">
       <span class="hero__badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Freeport, New York
       </span>
-      <h1 class="hero__title">Professional Auto Repair<br>You Can Count On</h1>
+      <h1 class="hero__title"><span class="gradient-text">Professional Auto Repair</span><br><span class="gradient-text gradient-text--delay">You Can Count On</span></h1>
       <p class="hero__subtitle">Reliable service, honest work, and attention to detail&nbsp;&mdash; right here in Freeport.</p>
       <div class="hero__actions">
         <a href="tel:+15163796060" class="btn btn--primary" id="hero-cta-book">
@@ -71,6 +73,7 @@
 
   <!-- ═══════════════════ SERVICES ═══════════════════ -->
   <section class="services" id="services">
+    <div class="bg-glow bg-glow--services" aria-hidden="true"></div>
     <div class="container">
       <span class="section-label">What We Do</span>
       <h2 class="section-title">Our Services</h2>
@@ -150,6 +153,7 @@
 
   <!-- ═══════════════════ WHY CHOOSE US ═══════════════════ -->
   <section class="why-us" id="why-us">
+    <div class="bg-glow bg-glow--why" aria-hidden="true"></div>
     <div class="container">
       <span class="section-label">Why Paul's</span>
       <h2 class="section-title">Why Local Customers Choose Us</h2>
@@ -178,26 +182,124 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ CREDIBILITY / REASSURANCE ═══════════════════ -->
-  <section class="credibility" id="credibility">
+  <!-- ═══════════════════ TESTIMONIALS SLIDER ═══════════════════ -->
+  <section class="testimonials" id="reviews">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="floating-shape floating-shape--1"></div>
+      <div class="floating-shape floating-shape--2"></div>
+      <div class="floating-shape floating-shape--3"></div>
+      <div class="floating-shape floating-shape--4"></div>
+    </div>
     <div class="container">
-      <div class="credibility__inner" data-aos>
-        <div class="credibility__item">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          <h3>Quality Parts</h3>
-          <p>We use reliable, quality parts for every repair.</p>
+      <span class="section-label section-label--light">Real Reviews</span>
+      <h2 class="section-title" style="color:#fff;">What Our Customers Say</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.55);">Don't just take our word for it — hear from people who trust Paul's Auto Repair with their vehicles.</p>
+
+      <!-- Google badge -->
+      <div class="testimonials__badge" data-aos>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span>Google Reviews</span>
+      </div>
+
+      <!-- Slider -->
+      <div class="testimonials__slider" data-aos>
+        <div class="testimonials__track" id="testimonials-track">
+
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__text">
+              &ldquo;Honest man. Always does a great Job. Have been coming here for many many years. Wouldn't go anywhere else. For all car needs contact him!&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AM</div>
+              <div>
+                <span class="testimonial-card__name">Ana Melendez</span>
+                <span class="testimonial-card__meta">9 reviews on Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__text">
+              &ldquo;I was in dire need of help when my car started to give me issues, so I panicked and went straight to google. I saw Paul's popped up and called right away after reading the amazing reviews! I introduced myself to Paul himself and explained my situation — he was incredibly helpful.&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">TB</div>
+              <div>
+                <span class="testimonial-card__name">Terrell Brown</span>
+                <span class="testimonial-card__meta">7 reviews on Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__text">
+              &ldquo;I had such a wonderful experience here. Firstly, Paul was so great, professional, and super informative! He explained everything that my car needed thoroughly and I felt like he was going to really take care of my car.&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">IB</div>
+              <div>
+                <span class="testimonial-card__name">Isabel Bello</span>
+                <span class="testimonial-card__meta">Local Guide · 16 reviews on Google</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FBBC05"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-card__text">
+              &ldquo;My car was making a sound for the past two weeks and I was stressed about where to bring it. Specially because sadly most places are a rip off or they straight up lie to you about what's going on with your car. Paul was honest and upfront about everything.&rdquo;
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">MS</div>
+              <div>
+                <span class="testimonial-card__name">Marco Santana</span>
+                <span class="testimonial-card__meta">Local Guide · 18 reviews on Google</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="credibility__divider"></div>
-        <div class="credibility__item">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <h3>Real People</h3>
-          <p>Talk directly to the people working on your car.</p>
-        </div>
-        <div class="credibility__divider"></div>
-        <div class="credibility__item">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
-          <h3>Done Right</h3>
-          <p>We stand behind our work on every vehicle.</p>
+
+        <!-- Slider controls -->
+        <div class="testimonials__controls">
+          <button class="testimonials__arrow testimonials__arrow--prev" id="testimonial-prev" aria-label="Previous review">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="testimonials__dots" id="testimonial-dots"></div>
+          <button class="testimonials__arrow testimonials__arrow--next" id="testimonial-next" aria-label="Next review">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -244,6 +346,13 @@
 
   <!-- ═══════════════════ CONTACT / CTA ═══════════════════ -->
   <section class="contact" id="contact">
+    <div class="floating-shapes" aria-hidden="true">
+      <div class="floating-shape floating-shape--5"></div>
+      <div class="floating-shape floating-shape--6"></div>
+      <div class="floating-shape floating-shape--7"></div>
+      <div class="floating-shape floating-shape--8"></div>
+    </div>
+    <canvas class="section-particles" id="contact-particles"></canvas>
     <div class="container">
       <div class="contact__inner" data-aos>
         <div class="contact__text">
